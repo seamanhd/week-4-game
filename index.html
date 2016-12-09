@@ -4,7 +4,7 @@
 <head>
 	
 	<link rel="stylesheet" href="assets/css/reset.css">
-	 
+	
 	 <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
 	 <link rel="stylesheet" href="assets/css/style.css">
 	 
@@ -13,12 +13,64 @@
 
 </head>
 <body>
+	<div class="containter">
+		<div class="row">
+		<p id="top" class="col-md-12"> Crystal Collector </p>
+		</div>
+	<div class="row">
+		<div id="inst" class="col-md-12 boxes"> <p id="underline">Instructions: </p> <p> Each crystal below has a secret value, which will be added to your current total when clicked. The value of each crystal changes with each game.</p>
+		
 
 
 
-<footer class="col-md-12"> © Heather Seaman 2016 </footer>
+<p>Click the crystals to increase your <b>Current Total</b> until your <b>Current Total</b> matches the <b>Target Number</b>. </p>
+
+<p>Be careful! If your <b>Current Total</b> goes <em>over</em> the <b>Target Number</b>, you will lose the game!</p>
+</div>
+</div>
+
+		
+
+		<div class="row">
+		<div class="col-lg-3">
+
+		<p id="target" class="boxes"> Target Number: </p>
+
+		<p id="current" class= "boxes"> Current Total: </p>
+
+		</div>
+
+		<div id="crystals" class="col-lg-6"> Crystals <br>
+		<img id="crystalOne" src="assets/images/crystal1.png" alt="crystal" width="140px" height="140px">
+		<img id="crystalTwo" src="assets/images/crystal2.png" alt="crystal" width="140px" height="140px">
+		<img id="crystalThree" src="assets/images/crystal3.png" alt="crystal" width="140px" height="140px">
+		<img id="crystalFour" src="assets/images/crystal4.png" alt="crystal" width="140px" height="140px"> </div>
+
+		
+
+		
+		
+
+		
+		<div class="col-lg-3">
+
+		<p id="wins" class= "boxes "> Wins: </p>
+
+		<p id="losses" class= "boxes"> Losses: </p>
+		</div>
+
+		
+		</div>
+		
 
 
+
+
+
+
+<footer class="footer col-md-12"> © Heather Seaman 2016 </footer>
+
+<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="assets/javascript/game.js"></script> 
 </body>
 </html>

@@ -1,0 +1,85 @@
+* {
+	box-sizing: border-box; 
+}
+
+ 
+em {
+font-style: italic;
+}
+
+#underline {
+	font-size: 20px;
+	 text-decoration: underline;
+}
+
+.boxes {
+	font-size: 18px;
+	font-family: arial;
+	
+	padding: 30px;
+	text-align: center;
+	background-color: #DDB9EB;
+}
+
+#inst {
+	font-size:16px;
+	margin-bottom: 20px;
+	margin-right: none;
+}
+
+#crystals {
+	
+	font-size: 24px;
+	font-family: arial;
+	padding-top: 10px;
+	text-align: center;
+
+}
+
+#target {
+	border-right: 5px solid purple;
+	margin-top: 15px;
+}
+
+#current {
+	border-right: 5px solid purple;
+	margin-bottom: 50px;
+}
+
+#wins {
+	margin-top: 15px;
+	border-left: 5px solid purple;
+}
+
+#losses {
+	border-left: 5px solid purple;
+}
+
+#crystals img {
+	max-width: 25%;
+	height: auto;
+	display: inline;
+}
+
+footer {
+	margin-top: 150px;
+	text-align: center;
+	position: static;
+	background-color: purple;
+	color: white;
+	bottom: 0px;
+	font-size: 16px;
+}
+
+#bottom {
+	margin-bottom: 150px;
+}
+
+#top {
+	text-align: center;
+	background-color: purple;
+	color: white;
+	font-size: 50px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}

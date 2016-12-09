@@ -1,7 +1,106 @@
 
+
+
 //-----------------------------------------------------------------------------
 // GLOBAL VARIABLES
 //-----------------------------------------------------------------------------
+
+var targetNum = 0
+var currentGuess = 0
+var winCount=0
+var lossCount=0
+var crystalOne=0
+var crystalTwo=0
+var crystalThree=0
+var crystalFour=0
+var crystalArray=[];
+
+
+//-----------------------------------------------------------------------------
+//FUNCTIONS
+//-----------------------------------------------------------------------------
+function getTarget (min, max) {
+  min = Math.ceil(40);
+  max = Math.floor(100);
+  targetNum = ( Math.floor(Math.random() * (max - min)) + min);
+}
+
+getTarget();
+	 
+$("#target").text("Target Number: " + targetNum)
+
+function getCrystal (min, max) {
+  min = Math.ceil(1);
+  max = Math.floor(15);
+  newCrystal = ( Math.floor(Math.random() * (max - min)) + min);
+}
+
+function setCrystals (){
+	getCrystal ();
+	crystalOne = newCrystal
+	getCrystal ();
+	crystalTwo = newCrystal
+	getCrystal ();
+	crystalThree = newCrystal
+	getCrystal ();
+	crystalFour = newCrystal
+	console.log(crystalOne, crystalTwo, crystalThree, crystalFour)
+}
+
+setCrystals();
+
+// iterate over an array using each? 
+
+function checkGuesses (){
+	if (currentGuess===targetNum) {
+		winCount++;
+		alert("You Win!");
+		$("#wins").text("Wins: " + winCount);
+		reset();
+	}
+	else if (currentGuess>targetNum) {
+		lossCount++;
+		alert("OOPS Not this time. Try again!");
+		$("#losses").text("Losses: " + lossCount);
+		reset();
+	}
+	else if (currentGuess<targetNum) {
+		console.log("ran game");
+	}
+}
+
+
+$("#crystalOne").on("click", function(){
+	currentGuess+=crystalOne;
+	$("#current").text("Current Total: " + currentGuess);
+	checkGuesses();
+})
+
+$("#crystalTwo").on("click", function(){
+	currentGuess+=crystalTwo;
+	$("#current").text("Current Total: " + currentGuess);
+	checkGuesses ();
+})
+$("#crystalThree").on("click", function(){
+	currentGuess+=crystalThree;
+	$("#current").text("Current Total: " + currentGuess);
+	checkGuesses();
+})
+$("#crystalFour").on("click", function(){
+	currentGuess+=crystalFour;
+	$("#current").text("Current Total: " + currentGuess);
+	checkGuesses();
+})
+	//create 4 random crystal numbers (where to update? val?)
+	
+	function reset () {
+		getTarget();
+	 
+$("#target").text("Target Number: " + targetNum)
+setCrystals();
+currentGuess = 0;
+$("#current").text("Current Total: 0")
+	}
 
 
 
